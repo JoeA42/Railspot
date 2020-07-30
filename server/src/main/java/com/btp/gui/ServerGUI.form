@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.btp.gui.ServerGUI">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="410" y="95" width="1221" height="533"/>
+    </constraints>
+    <properties>
+      <background color="-14606047"/>
+      <enabled value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="261ce" binding="rightPanel" layout-manager="GridLayoutManager" row-count="18" column-count="17" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14606047"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <vspacer id="95136">
+            <constraints>
+              <grid row="4" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="10550" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="16" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-6974055"/>
+              <text value="User Info"/>
+            </properties>
+          </component>
+          <vspacer id="38b33">
+            <constraints>
+              <grid row="12" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <hspacer id="39295">
+            <constraints>
+              <grid row="8" column="15" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <vspacer id="dda74">
+            <constraints>
+              <grid row="13" column="15" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="dbf45">
+            <constraints>
+              <grid row="2" column="15" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="dfcd7">
+            <constraints>
+              <grid row="0" column="15" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="9ccfd">
+            <constraints>
+              <grid row="14" column="15" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <scrollpane id="e2b0f">
+            <constraints>
+              <grid row="10" column="1" row-span="6" col-span="14" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="b1d93" class="javax.swing.JTextArea" binding="messageTextArea" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <foreground color="-1"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <hspacer id="c32bc">
+            <constraints>
+              <grid row="17" column="10" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="b2af9">
+            <constraints>
+              <grid row="17" column="11" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="7b4da">
+            <constraints>
+              <grid row="17" column="12" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="f419">
+            <constraints>
+              <grid row="17" column="13" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <vspacer id="50ca7">
+            <constraints>
+              <grid row="17" column="15" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="32dc9">
+            <constraints>
+              <grid row="16" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="29cdf">
+            <constraints>
+              <grid row="15" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="11a0" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-6974055"/>
+              <text value="Search User by ID"/>
+            </properties>
+          </component>
+          <scrollpane id="3df43">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="14" vsize-policy="1" hsize-policy="1" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14606047"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="d9a8e" class="javax.swing.JTable" binding="userData">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <foreground color="-1"/>
+                  <preferredScrollableViewportSize width="150" height="80"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <vspacer id="4c850">
+            <constraints>
+              <grid row="10" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="fd3ea">
+            <constraints>
+              <grid row="11" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="87dc8">
+            <constraints>
+              <grid row="13" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="65fb3">
+            <constraints>
+              <grid row="14" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="f449d">
+            <constraints>
+              <grid row="8" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="75448">
+            <constraints>
+              <grid row="5" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="d82c5">
+            <constraints>
+              <grid row="9" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="e9311" class="javax.swing.JButton" binding="sendButton" default-binding="true">
+            <constraints>
+              <grid row="16" column="1" row-span="1" col-span="7" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14606047"/>
+              <text value="Send"/>
+            </properties>
+          </component>
+          <scrollpane id="e19f8">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="14" vsize-policy="1" hsize-policy="1" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14606047"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="c4a14" class="javax.swing.JTable" binding="userRecipes">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <foreground color="-1"/>
+                  <preferredScrollableViewportSize width="150" height="80"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <component id="399b6" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="9" column="1" row-span="1" col-span="7" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-6974055"/>
+              <text value="Send User Notification"/>
+            </properties>
+          </component>
+          <hspacer id="47952">
+            <constraints>
+              <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="da285">
+            <constraints>
+              <grid row="17" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <vspacer id="f7d3d">
+            <constraints>
+              <grid row="7" column="16" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="fad64" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="13" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-6974055"/>
+              <text value="User Recipes"/>
+            </properties>
+          </component>
+          <component id="f2c30" class="javax.swing.JButton" binding="searchButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="12" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Search"/>
+            </properties>
+          </component>
+          <scrollpane id="6aa">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="11" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="925fe" class="javax.swing.JTextArea" binding="userSearchBoxTextArea" default-binding="true">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <foreground color="-1"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <component id="6e495" class="javax.swing.JRadioButton" binding="thisUserRadioButton" default-binding="true">
+            <constraints>
+              <grid row="9" column="8" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="This user"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="659c1" binding="leftPanel" layout-manager="GridLayoutManager" row-count="7" column-count="13" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14606047"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <vspacer id="cbb2e">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="c6c0">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="5df45">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="38da3">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <hspacer id="76b6">
+            <constraints>
+              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="62265">
+            <constraints>
+              <grid row="6" column="11" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="95712">
+            <constraints>
+              <grid row="6" column="12" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <scrollpane id="183fd">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="10" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="45cdf" class="javax.swing.JTable" binding="chefRequestTable">
+                <constraints/>
+                <properties>
+                  <autoCreateRowSorter value="false"/>
+                  <background color="-16777216"/>
+                  <foreground color="-527873"/>
+                  <intercellSpacing width="10" height="1"/>
+                  <preferredScrollableViewportSize width="150" height="100"/>
+                  <showVerticalLines value="false"/>
+                </properties>
+                <clientProperties>
+                  <Table.isFileList class="java.lang.Boolean" value="false"/>
+                </clientProperties>
+              </component>
+            </children>
+          </scrollpane>
+          <hspacer id="308a5">
+            <constraints>
+              <grid row="6" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="2f814">
+            <constraints>
+              <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="ffc6c">
+            <constraints>
+              <grid row="6" column="10" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="1db10">
+            <constraints>
+              <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="f2801">
+            <constraints>
+              <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="d2731" class="javax.swing.JButton" binding="refuseButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="9" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14606047"/>
+              <text value="Refuse"/>
+            </properties>
+          </component>
+          <component id="73df1" class="javax.swing.JButton" binding="acceptButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-14606047"/>
+              <text value="Accept"/>
+            </properties>
+          </component>
+          <hspacer id="72aaf">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="8167f">
+            <constraints>
+              <grid row="6" column="8" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="a6053">
+            <constraints>
+              <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="b626a">
+            <constraints>
+              <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="c651f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-7632753"/>
+              <text value="Chef Request Table"/>
+            </properties>
+          </component>
+          <component id="71f6b" class="javax.swing.JButton" binding="refreshButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="8" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Refresh"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="15cd4" binding="middlePanel" layout-manager="GridLayoutManager" row-count="15" column-count="19" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14606047"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <vspacer id="554f0">
+            <constraints>
+              <grid row="13" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="35f23">
+            <constraints>
+              <grid row="12" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="94a1f">
+            <constraints>
+              <grid row="11" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="ea3d">
+            <constraints>
+              <grid row="14" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="614c0">
+            <constraints>
+              <grid row="10" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="6ae42">
+            <constraints>
+              <grid row="9" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="4ee64">
+            <constraints>
+              <grid row="8" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="5d5de">
+            <constraints>
+              <grid row="5" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="bb92">
+            <constraints>
+              <grid row="1" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <hspacer id="38933">
+            <constraints>
+              <grid row="14" column="12" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="a3a98">
+            <constraints>
+              <grid row="14" column="17" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="f1759">
+            <constraints>
+              <grid row="14" column="16" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="eeb63">
+            <constraints>
+              <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="e76ab">
+            <constraints>
+              <grid row="14" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="2c98f">
+            <constraints>
+              <grid row="14" column="15" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="16573">
+            <constraints>
+              <grid row="14" column="14" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="30b7d">
+            <constraints>
+              <grid row="14" column="10" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="d0083">
+            <constraints>
+              <grid row="14" column="13" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="25791">
+            <constraints>
+              <grid row="14" column="11" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <vspacer id="62feb">
+            <constraints>
+              <grid row="2" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="a3310">
+            <constraints>
+              <grid row="4" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="cf70">
+            <constraints>
+              <grid row="6" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="8e8">
+            <constraints>
+              <grid row="3" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <vspacer id="90dc7">
+            <constraints>
+              <grid row="0" column="18" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <scrollpane id="c5ee4">
+            <constraints>
+              <grid row="8" column="1" row-span="5" col-span="17" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="288d9" class="javax.swing.JTextArea" binding="serverConsoleMonitor">
+                <constraints/>
+                <properties>
+                  <background color="-16777216"/>
+                  <foreground color="-16384256"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+          <hspacer id="85be1">
+            <constraints>
+              <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="1dcf">
+            <constraints>
+              <grid row="14" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="6660a">
+            <constraints>
+              <grid row="14" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="15c24">
+            <constraints>
+              <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="756ef">
+            <constraints>
+              <grid row="14" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="131ad">
+            <constraints>
+              <grid row="14" column="8" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="6153d">
+            <constraints>
+              <grid row="14" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <hspacer id="4002a">
+            <constraints>
+              <grid row="14" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="6bd09" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-6974055"/>
+              <text value="Server Console"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

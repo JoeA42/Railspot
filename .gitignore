@@ -1,0 +1,410 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+### Intellij+all ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
+# *.iml
+# *.ipr
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# CMake
+cmake-build-*/
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
+target/
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
+
+### Intellij+all Patch ###
+# Ignores the whole .idea folder and all .iml files
+# See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
+
+.idea/
+
+# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
+
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
+
+# Sonarlint plugin
+.idea/sonarlint
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# dependencies
+/client/node_modules
+
+# profiling files
+chrome-profiler-events*.json
+speed-measure-plugin*.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+client/node_modules/zone.js/lib/zone-spec/wtf.d.ts
+client/node_modules/zone.js/lib/zone-spec/task-tracking.js
+client/node_modules/zone.js/lib/zone-spec/task-tracking.d.ts
+client/node_modules/zone.js/lib/zone-spec/sync-test.js
+client/node_modules/zone.js/lib/zone-spec/sync-test.d.ts
+client/node_modules/zone.js/lib/zone-spec/proxy.js
+client/node_modules/zone.js/lib/zone-spec/proxy.d.ts
+client/node_modules/zone.js/lib/zone-spec/long-stack-trace.js
+client/node_modules/zone.js/lib/zone-spec/long-stack-trace.d.ts
+client/node_modules/zone.js/lib/zone-spec/fake-async-test.js
+client/node_modules/zone.js/lib/zone-spec/fake-async-test.d.ts
+client/node_modules/zone.js/lib/zone-spec/async-test.js
+client/node_modules/zone.js/lib/zone-spec/async-test.d.ts
+client/node_modules/zone.js/lib/testing/zone-testing.js
+client/node_modules/zone.js/lib/testing/zone-testing.d.ts
+client/node_modules/zone.js/lib/testing/promise-testing.js
+client/node_modules/zone.js/lib/testing/promise-testing.d.ts
+client/node_modules/zone.js/lib/testing/fake-async.js
+client/node_modules/zone.js/lib/testing/fake-async.d.ts
+client/node_modules/zone.js/lib/testing/async-testing.js
+client/node_modules/zone.js/lib/testing/async-testing.d.ts
+client/node_modules/zone.js/lib/rxjs/rxjs.js
+client/node_modules/zone.js/lib/rxjs/rxjs.d.ts
+client/node_modules/zone.js/lib/rxjs/rxjs-fake-async.js
+client/node_modules/zone.js/lib/rxjs/rxjs-fake-async.d.ts
+client/node_modules/zone.js/lib/node/rollup-test-main.js
+client/node_modules/zone.js/lib/node/rollup-test-main.d.ts
+client/node_modules/zone.js/lib/node/rollup-main.js
+client/node_modules/zone.js/lib/node/rollup-main.d.ts
+client/node_modules/zone.js/lib/node/node_util.js
+client/node_modules/zone.js/lib/node/node_util.d.ts
+client/node_modules/zone.js/lib/node/node.js
+client/node_modules/zone.js/lib/node/node.d.ts
+client/node_modules/zone.js/lib/node/fs.js
+client/node_modules/zone.js/lib/node/fs.d.ts
+client/node_modules/zone.js/lib/node/events.js
+client/node_modules/zone.js/lib/node/events.d.ts
+client/node_modules/zone.js/lib/mocha/mocha.js
+client/node_modules/zone.js/lib/mocha/mocha.d.ts
+client/node_modules/zone.js/lib/mix/rollup-mix.js
+client/node_modules/zone.js/lib/mix/rollup-mix.d.ts
+client/node_modules/zone.js/lib/jest/jest.js
+client/node_modules/zone.js/lib/jest/jest.d.ts
+client/node_modules/zone.js/lib/jasmine/jasmine.js
+client/node_modules/zone.js/lib/jasmine/jasmine.d.ts
+client/node_modules/zone.js/lib/extra/socket-io.js
+client/node_modules/zone.js/lib/extra/socket-io.d.ts
+client/node_modules/zone.js/lib/extra/jsonp.js
+client/node_modules/zone.js/lib/extra/jsonp.d.ts
+client/node_modules/zone.js/lib/extra/electron.js
+client/node_modules/zone.js/lib/extra/electron.d.ts
+client/node_modules/zone.js/lib/extra/cordova.js
+client/node_modules/zone.js/lib/extra/cordova.d.ts
+client/node_modules/zone.js/lib/extra/bluebird.js
+client/node_modules/zone.js/lib/extra/bluebird.d.ts
+client/node_modules/zone.js/lib/common/utils.js
+client/node_modules/zone.js/lib/common/utils.d.ts
+client/node_modules/zone.js/lib/common/to-string.js
+client/node_modules/zone.js/lib/common/to-string.d.ts
+client/node_modules/zone.js/lib/common/timers.js
+client/node_modules/zone.js/lib/common/timers.d.ts
+client/node_modules/zone.js/lib/common/promise.js
+client/node_modules/zone.js/lib/common/promise.d.ts
+client/node_modules/zone.js/lib/common/fetch.js
+client/node_modules/zone.js/lib/common/fetch.d.ts
+client/node_modules/zone.js/lib/common/events.js
+client/node_modules/zone.js/lib/common/events.d.ts
+client/node_modules/zone.js/lib/common/error-rewrite.js
+client/node_modules/zone.js/lib/common/error-rewrite.d.ts
+client/node_modules/zone.js/lib/browser/websocket.js
+client/node_modules/zone.js/lib/browser/websocket.d.ts
+client/node_modules/zone.js/lib/browser/webapis-user-media.js
+client/node_modules/zone.js/lib/browser/webapis-user-media.d.ts
+client/node_modules/zone.js/lib/browser/webapis-rtc-peer-connection.js
+client/node_modules/zone.js/lib/browser/webapis-rtc-peer-connection.d.ts
+client/node_modules/zone.js/lib/browser/webapis-resize-observer.js
+client/node_modules/zone.js/lib/browser/webapis-resize-observer.d.ts
+client/node_modules/zone.js/lib/browser/webapis-notification.js
+client/node_modules/zone.js/lib/browser/webapis-notification.d.ts
+client/node_modules/zone.js/lib/browser/webapis-media-query.js
+client/node_modules/zone.js/lib/browser/webapis-media-query.d.ts
+client/node_modules/zone.js/lib/browser/shadydom.js
+client/node_modules/zone.js/lib/browser/shadydom.d.ts
+client/node_modules/zone.js/lib/browser/rollup-test-main.js
+client/node_modules/zone.js/lib/browser/rollup-test-main.d.ts
+client/node_modules/zone.js/lib/browser/rollup-main.js
+client/node_modules/zone.js/lib/browser/rollup-main.d.ts
+client/node_modules/zone.js/lib/browser/rollup-legacy-test-main.js
+client/node_modules/zone.js/lib/browser/rollup-legacy-test-main.d.ts
+client/node_modules/zone.js/lib/browser/rollup-legacy-main.js
+client/node_modules/zone.js/lib/browser/rollup-legacy-main.d.ts
+client/node_modules/zone.js/lib/browser/rollup-common.js
+client/node_modules/zone.js/lib/browser/rollup-common.d.ts
+client/node_modules/zone.js/lib/browser/register-element.js
+client/node_modules/zone.js/lib/browser/register-element.d.ts
+client/node_modules/zone.js/lib/browser/property-descriptor.js
+client/node_modules/zone.js/lib/browser/property-descriptor.d.ts
+client/node_modules/zone.js/lib/browser/property-descriptor-legacy.js
+client/node_modules/zone.js/lib/browser/property-descriptor-legacy.d.ts
+client/node_modules/zone.js/lib/browser/message-port.js
+client/node_modules/zone.js/lib/browser/message-port.d.ts
+client/node_modules/zone.js/lib/browser/event-target.js
+client/node_modules/zone.js/lib/browser/event-target.d.ts
+client/node_modules/zone.js/lib/browser/event-target-legacy.js
+client/node_modules/zone.js/lib/browser/event-target-legacy.d.ts
+client/node_modules/zone.js/lib/browser/define-property.js
+client/node_modules/zone.js/lib/browser/define-property.d.ts
+client/node_modules/zone.js/lib/browser/custom-elements.js
+client/node_modules/zone.js/lib/browser/custom-elements.d.ts
+client/node_modules/zone.js/lib/browser/canvas.js
+client/node_modules/zone.js/lib/browser/canvas.d.ts
+client/node_modules/zone.js/lib/browser/browser.js
+client/node_modules/zone.js/lib/browser/browser.d.ts
+client/node_modules/zone.js/lib/browser/browser-util.js
+client/node_modules/zone.js/lib/browser/browser-util.d.ts
+client/node_modules/zone.js/lib/browser/browser-legacy.js
+client/node_modules/zone.js/lib/browser/browser-legacy.d.ts
+client/node_modules/zone.js/lib/browser/api-util.js
+client/node_modules/zone.js/lib/browser/api-util.d.ts
+client/node_modules/zone.js/dist/zone_externs.js
+client/node_modules/zone.js/dist/zone.min.js
+client/node_modules/zone.js/dist/zone.js.d.ts
+client/node_modules/zone.js/dist/zone.js
+client/node_modules/zone.js/dist/zone.configurations.api.ts
+client/node_modules/zone.js/dist/zone.api.extensions.ts
+client/node_modules/zone.js/dist/zone-testing.min.js
+client/node_modules/zone.js/dist/zone-testing.js
+client/node_modules/zone.js/dist/zone-testing-node-bundle.min.js
+client/node_modules/zone.js/dist/zone-testing-node-bundle.js
+client/node_modules/zone.js/dist/zone-testing-bundle.min.js
+client/node_modules/zone.js/dist/zone-testing-bundle.js
+client/node_modules/zone.js/dist/zone-patch-user-media.min.js
+client/node_modules/zone.js/dist/zone-patch-user-media.js
+client/node_modules/zone.js/dist/zone-patch-socket-io.min.js
+client/node_modules/zone.js/dist/zone-patch-socket-io.js
+client/node_modules/zone.js/dist/zone-patch-rxjs.min.js
+client/node_modules/zone.js/dist/zone-patch-rxjs.js
+client/node_modules/zone.js/dist/zone-patch-rxjs-fake-async.min.js
+client/node_modules/zone.js/lib/zone-spec/wtf.d.ts
+client/node_modules/zone.js/lib/zone-spec/task-tracking.js
+client/node_modules/zone.js/lib/zone-spec/task-tracking.d.ts
+client/node_modules/zone.js/lib/zone-spec/sync-test.js
+client/node_modules/zone.js/lib/zone-spec/sync-test.d.ts
+client/node_modules/zone.js/lib/zone-spec/proxy.js
+client/node_modules/zone.js/lib/zone-spec/proxy.d.ts
+client/node_modules/zone.js/lib/zone-spec/long-stack-trace.js
+client/node_modules/zone.js/lib/zone-spec/long-stack-trace.d.ts
+client/node_modules/zone.js/lib/zone-spec/fake-async-test.js
+client/node_modules/zone.js/lib/zone-spec/fake-async-test.d.ts
+client/node_modules/zone.js/lib/zone-spec/async-test.js
+client/node_modules/zone.js/lib/zone-spec/async-test.d.ts
+client/node_modules/zone.js/lib/testing/zone-testing.js
+client/node_modules/zone.js/lib/testing/zone-testing.d.ts
+client/node_modules/zone.js/lib/testing/promise-testing.js
+client/node_modules/zone.js/lib/testing/promise-testing.d.ts
+client/node_modules/zone.js/lib/testing/fake-async.js
+client/node_modules/zone.js/lib/testing/fake-async.d.ts
+client/node_modules/zone.js/lib/testing/async-testing.js
+client/node_modules/zone.js/lib/testing/async-testing.d.ts
+client/node_modules/zone.js/lib/rxjs/rxjs.js
+client/node_modules/zone.js/lib/rxjs/rxjs.d.ts
+client/node_modules/zone.js/lib/rxjs/rxjs-fake-async.js
+client/node_modules/zone.js/lib/rxjs/rxjs-fake-async.d.ts
+client/node_modules/zone.js/lib/node/rollup-test-main.js
+client/node_modules/zone.js/lib/node/rollup-test-main.d.ts
+client/node_modules/zone.js/lib/node/rollup-main.js
+client/node_modules/zone.js/lib/node/rollup-main.d.ts
+client/node_modules/zone.js/lib/node/node_util.js
+client/node_modules/zone.js/lib/node/node_util.d.ts
+client/node_modules/zone.js/lib/node/node.js
+client/node_modules/zone.js/lib/node/node.d.ts
+client/node_modules/zone.js/lib/node/fs.js
+client/node_modules/zone.js/lib/node/fs.d.ts
+client/node_modules/zone.js/lib/node/events.js
+client/node_modules/zone.js/lib/node/events.d.ts
+client/node_modules/zone.js/lib/mocha/mocha.js
+client/node_modules/zone.js/lib/mocha/mocha.d.ts
+client/node_modules/zone.js/lib/mix/rollup-mix.js
+client/node_modules/zone.js/lib/mix/rollup-mix.d.ts
+client/node_modules/zone.js/lib/jest/jest.js
+client/node_modules/zone.js/lib/jest/jest.d.ts
+client/node_modules/zone.js/lib/jasmine/jasmine.js
+client/node_modules/zone.js/lib/jasmine/jasmine.d.ts
+client/node_modules/zone.js/lib/extra/socket-io.js
+client/node_modules/zone.js/lib/extra/socket-io.d.ts
+client/node_modules/zone.js/lib/extra/jsonp.js
+client/node_modules/zone.js/lib/extra/jsonp.d.ts
+client/node_modules/zone.js/lib/extra/electron.js
+client/node_modules/zone.js/lib/extra/electron.d.ts
+client/node_modules/zone.js/lib/extra/cordova.js
+client/node_modules/zone.js/lib/extra/cordova.d.ts
+client/node_modules/zone.js/lib/extra/bluebird.js
+client/node_modules/zone.js/lib/extra/bluebird.d.ts
+client/node_modules/zone.js/lib/common/utils.js
+client/node_modules/zone.js/lib/common/utils.d.ts
+client/node_modules/zone.js/lib/common/to-string.js
+client/node_modules/zone.js/lib/common/to-string.d.ts
+client/node_modules/zone.js/lib/common/timers.js
+client/node_modules/zone.js/lib/common/timers.d.ts
+client/node_modules/zone.js/lib/common/promise.js
+client/node_modules/zone.js/lib/common/promise.d.ts
+client/node_modules/zone.js/lib/common/fetch.js
+client/node_modules/zone.js/lib/common/fetch.d.ts
+client/node_modules/zone.js/lib/common/events.js
+client/node_modules/zone.js/lib/common/events.d.ts
+client/node_modules/zone.js/lib/common/error-rewrite.js
+client/node_modules/zone.js/lib/common/error-rewrite.d.ts
+client/node_modules/zone.js/lib/browser/websocket.js
+client/node_modules/zone.js/lib/browser/websocket.d.ts
+client/node_modules/zone.js/lib/browser/webapis-user-media.js
+client/node_modules/zone.js/lib/browser/webapis-user-media.d.ts
+client/node_modules/zone.js/lib/browser/webapis-rtc-peer-connection.js
+client/node_modules/zone.js/lib/browser/webapis-rtc-peer-connection.d.ts
+client/node_modules/zone.js/lib/browser/webapis-resize-observer.js
+client/node_modules/zone.js/lib/browser/webapis-resize-observer.d.ts
+client/node_modules/zone.js/lib/browser/webapis-notification.js
+client/node_modules/zone.js/lib/browser/webapis-notification.d.ts
+client/node_modules/zone.js/lib/browser/webapis-media-query.js
+client/node_modules/zone.js/lib/browser/webapis-media-query.d.ts
+client/node_modules/zone.js/lib/browser/shadydom.js
+client/node_modules/zone.js/lib/browser/shadydom.d.ts
+client/node_modules/zone.js/lib/browser/rollup-test-main.js
+client/node_modules/zone.js/lib/browser/rollup-test-main.d.ts
+client/node_modules/zone.js/lib/browser/rollup-main.js
+client/node_modules/zone.js/lib/browser/rollup-main.d.ts
+client/node_modules/zone.js/lib/browser/rollup-legacy-test-main.js
+client/node_modules/zone.js/lib/browser/rollup-legacy-test-main.d.ts
+client/node_modules/zone.js/lib/browser/rollup-legacy-main.js
+client/node_modules/zone.js/lib/browser/rollup-legacy-main.d.ts
+client/node_modules/zone.js/lib/browser/rollup-common.js
+client/node_modules/zone.js/lib/browser/rollup-common.d.ts
+client/node_modules/zone.js/lib/browser/register-element.js
+client/node_modules/zone.js/lib/browser/register-element.d.ts
+client/node_modules/zone.js/lib/browser/property-descriptor.js
+client/node_modules/zone.js/lib/browser/property-descriptor.d.ts
+client/node_modules/zone.js/lib/browser/property-descriptor-legacy.js
+client/node_modules/zone.js/lib/browser/property-descriptor-legacy.d.ts
+client/node_modules/zone.js/lib/browser/message-port.js
+client/node_modules/zone.js/lib/browser/message-port.d.ts
+client/node_modules/zone.js/lib/browser/event-target.js
+client/node_modules/zone.js/lib/browser/event-target.d.ts
+client/node_modules/zone.js/lib/browser/event-target-legacy.js
+client/node_modules/zone.js/lib/browser/event-target-legacy.d.ts
+client/node_modules/zone.js/lib/browser/define-property.js
+client/node_modules/zone.js/lib/browser/define-property.d.ts
+client/node_modules/zone.js/lib/browser/custom-elements.js
+client/node_modules/zone.js/lib/browser/custom-elements.d.ts
+client/node_modules/zone.js/lib/browser/canvas.js
+client/node_modules/zone.js/lib/browser/canvas.d.ts
+client/node_modules/zone.js/lib/browser/browser.js
+client/node_modules/zone.js/lib/browser/browser.d.ts
+client/node_modules/zone.js/lib/browser/browser-util.js
+client/node_modules/zone.js/lib/browser/browser-util.d.ts
+client/node_modules/zone.js/lib/browser/browser-legacy.js
+client/node_modules/zone.js/lib/browser/browser-legacy.d.ts
+client/node_modules/zone.js/lib/browser/api-util.js
+client/node_modules/zone.js/lib/browser/api-util.d.ts
+client/node_modules/zone.js/dist/zone_externs.js
+client/node_modules/zone.js/dist/zone.min.js
+client/node_modules/zone.js/dist/zone.js.d.ts
+client/node_modules/zone.js/dist/zone.js
+client/node_modules/zone.js/dist/zone.configurations.api.ts
+client/node_modules/zone.js/dist/zone.api.extensions.ts
+client/node_modules/zone.js/dist/zone-testing.min.js
+client/node_modules/zone.js/dist/zone-testing.js
+client/node_modules/zone.js/dist/zone-testing-node-bundle.min.js
+client/node_modules/zone.js/dist/zone-testing-node-bundle.js
+client/node_modules/zone.js/dist/zone-testing-bundle.min.js
+client/node_modules/zone.js/dist/zone-testing-bundle.js
+client/node_modules/zone.js/dist/zone-patch-user-media.min.js
+client/node_modules/zone.js/dist/zone-patch-user-media.js
+client/node_modules/zone.js/dist/zone-patch-socket-io.min.js
+client/node_modules/zone.js/dist/zone-patch-socket-io.js
+client/node_modules/zone.js/dist/zone-patch-rxjs.min.js
+client/node_modules/zone.js/dist/zone-patch-rxjs.js
+client/node_modules/zone.js/dist/zone-patch-rxjs-fake-async.min.js
