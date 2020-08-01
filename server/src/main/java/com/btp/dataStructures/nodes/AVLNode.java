@@ -1,30 +1,31 @@
 package com.btp.dataStructures.nodes;
 
-import com.btp.serverData.clientObjects.Recipe;
-
 /**
  * This class represents a node that forms part of the AVL tree
- *
+ * @param <T> A generic type
  */
-public class RecipeNode {
-    private Recipe element = null;
-    private RecipeNode left;
-    private RecipeNode right;
+public class AVLNode<T extends Comparable<T>>{
+    private T element;
+    private AVLNode<T> left;
+    private AVLNode<T> right;
     private int height;
 
     /**
      * The constructor of the class called externally. It calls the private constructor.
+     * @param element The element attribute that the node will contain
      */
-    public RecipeNode(){
-        this(null, null);
+    public AVLNode(T element){
+        this(element, null, null);
     }
 
     /**
      * The actual constructor for this class
+     * @param element The element attribute that the node will contain
      * @param left The left child of the node
      * @param right The right child of the node
      */
-    private RecipeNode(RecipeNode left, RecipeNode right){
+    private AVLNode(T element, AVLNode<T> left, AVLNode<T> right){
+        this.element = element;
         this.left = left;
         this.right = right;
         this.height = 1;
@@ -32,49 +33,49 @@ public class RecipeNode {
 
     /**
      * Getter for the element attribute
-     * @return the Recipe the node is storing
+     * @return the value the node is storing
      */
-    public Recipe getElement() {
-        return this.element;
+    public T getElement() {
+        return element;
     }
 
     /**
      * Setter for the element attribute
-     * @param element the new Recipe for element
+     * @param element the new value for element
      */
-    public void setElement(Recipe element) {
+    public void setElement(T element) {
         this.element = element;
     }
 
     /**
      * Getter for the left child
-     * @return the RecipeNode pointed by the left pointer
+     * @return the AVLNode pointed by the left pointer
      */
-    public RecipeNode getLeft() {
+    public AVLNode<T> getLeft() {
         return left;
     }
 
     /**
      * Setter for the left child
-     * @param left the RecipeNode left child
+     * @param left the AVLNode left child
      */
-    public void setLeft(RecipeNode left) {
+    public void setLeft(AVLNode<T> left) {
         this.left = left;
     }
 
     /**
      * Getter for the right child
-     * @return the RecipeNode pointed by the right pointer
+     * @return the TreeNode pointed by the right pointer
      */
-    public RecipeNode getRight() {
+    public AVLNode<T> getRight() {
         return right;
     }
 
     /**
      * Setter for the right child
-     * @param right the RecipeNode right child
+     * @param right the AVLNode right child
      */
-    public void setRight(RecipeNode right) {
+    public void setRight(AVLNode<T> right) {
         this.right = right;
     }
 

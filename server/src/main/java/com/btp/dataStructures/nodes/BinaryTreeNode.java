@@ -1,4 +1,4 @@
-package com.btp.dataStructures.nodes.GenericNodes;
+package com.btp.dataStructures.nodes;
 
 /**
  * This class represents a node that forms part of a tree
@@ -8,14 +8,6 @@ public class BinaryTreeNode<T extends Comparable<T>> {
     private T element = null;
     private BinaryTreeNode<T> left;
     private BinaryTreeNode<T> right;
-
-    /**
-     * The constructor of the method called externally.
-     * It calls the private constructor.
-     */
-    public BinaryTreeNode() {
-        this(null, null);
-    }
 
     /**
      * The actual constructor for this class

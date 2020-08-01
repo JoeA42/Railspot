@@ -1,6 +1,6 @@
-package com.btp.dataStructures.trees.GenericTrees;
+package com.btp.dataStructures.trees;
 
-import com.btp.dataStructures.nodes.GenericNodes.BinaryTreeNode;
+import com.btp.dataStructures.nodes.BinaryTreeNode;
 
 /**
  * A class that represents a Binary Tree
@@ -89,7 +89,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     /**
-     * Finds the minimun element in the tree.
+     * Finds the minimum element in the tree.
      * Calls the recursive method findMin
      *
      * @return the smallest element found
@@ -194,11 +194,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * Recursive method that removes a certain node
      * @param element the element that will be searched and deleted
      * @param current the current node being compared
-     * @return
+     * @return BinaryTreeNode for recursive call
      */
     private BinaryTreeNode<T> remove(T element, BinaryTreeNode<T> current) {
         if (current == null) {
-            return current;
+            return null;
         }
         int compareValue = element.compareTo(current.getElement());
 

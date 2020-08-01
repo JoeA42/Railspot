@@ -1,6 +1,6 @@
-package com.btp.dataStructures.trees.GenericTrees;
+package com.btp.dataStructures.trees;
 
-import com.btp.dataStructures.nodes.GenericNodes.AVLNode;
+import com.btp.dataStructures.nodes.AVLNode;
 
 /**
  * the public class for the SplayTree instances. This code is based in the tutorial found in
@@ -56,7 +56,7 @@ public class AVLTree<T extends Comparable<T>>{
     }
 
     /**
-     * Finds the minimun element in the tree.
+     * Finds the minimum element in the tree.
      * Calls the recursive method findMin
      *
      * @return the smallest element found
@@ -132,7 +132,7 @@ public class AVLTree<T extends Comparable<T>>{
      * @return int with the max value
      */
     private int max(int a, int b){
-        return (a > b) ? a : b;
+        return Math.max(a, b);
     }
 
     /**
@@ -202,7 +202,7 @@ public class AVLTree<T extends Comparable<T>>{
      */
     public AVLNode<T> insert(T element, AVLNode<T> current){
         if (current == null){
-            return new AVLNode<T>(element);
+            return new AVLNode<>(element);
         }
 
         int compareValue = element.compareTo(current.getElement());
@@ -269,10 +269,10 @@ public class AVLTree<T extends Comparable<T>>{
      * @param current the current node being compared
      * @return The node that was checked to be processed recursively
      */
-    private AVLNode delete(T element, AVLNode<T> current) {
+    private AVLNode<T> delete(T element, AVLNode<T> current) {
 
         if (current == null)
-            return current;
+            return null;
 
         int compareValue = element.compareTo(current.getElement());
 
@@ -283,31 +283,26 @@ public class AVLTree<T extends Comparable<T>>{
         } else {
             if ((current.getLeft() == null) || (current.getRight() == null))
             {
-                AVLNode tmp = null;
-                if (tmp == current.getLeft()) {
+                AVLNode<T> tmp;
+                if (null == current.getLeft()) {
                     tmp = current.getRight();
                 } else {
-
                     tmp = current.getLeft();
                 }
 
-                if (tmp == null) {
-                    tmp = current;
-                    current = null;
-                } else
-                    current = tmp;
+                current = tmp;
             }
             else
             {
-                AVLNode tmp = findMin(current.getRight());
+                AVLNode<T> tmp = findMin(current.getRight());
 
-                current.setElement((T) tmp.getElement());
+                current.setElement(tmp.getElement());
 
-                current.setRight(delete((T) tmp.getElement(), current.getRight()));
+                current.setRight(delete(tmp.getElement(), current.getRight()));
             }
         }
         if (current == null)
-            return current;
+            return null;
 
         current.setHeight(max(height(current.getLeft()), height(current.getRight())) + 1);
 
