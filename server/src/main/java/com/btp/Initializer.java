@@ -1,14 +1,9 @@
 package com.btp;
 
 import com.btp.gui.ServerGUI;
-import com.btp.serverData.clientObjects.Business;
-import com.btp.serverData.repos.BusinessRepo;
-import com.btp.serverData.repos.RecipeRepo;
-import com.btp.serverData.repos.UserRepo;
+
 import javax.servlet.http.HttpServlet;
 import javax.swing.*;
-import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * This class creates a servlet that runs automatically when the server start, using the HttpServlet class
@@ -40,15 +35,9 @@ public class Initializer extends HttpServlet {
     public void init() {
         System.out.println("running initialization...");
         System.out.println("loading resources...");
-        try {
-            UserRepo.loadTree();
-            RecipeRepo.loadTree();
-            BusinessRepo.loadTree();
-            //testResources();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        testResources();
+
         System.out.println("opening GUI...");
         try {
             createWindow();
@@ -62,17 +51,6 @@ public class Initializer extends HttpServlet {
      * this method is used to load resources easily
      */
     public static void testResources() {
-        Business b1 = new Business();
-        ArrayList<String> b1Employees = new ArrayList<>();
-        b1Employees.add("m@gmail.com");
-        b1.setEmployeeList(b1Employees);
-        b1.setName("Las tortas del magias");
-        b1.setBusinessHours("M-F;5:11:00am-11:00pm");
-        b1.setContact("m@gmail.com");
-        b1.setLocation("Moravia");
-        b1.setId(500);
-        BusinessRepo.addBusiness(b1);
-
     }
 
     /**

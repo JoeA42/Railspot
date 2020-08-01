@@ -1,6 +1,6 @@
-package com.btp.dataStructures.trees.GenericTrees;
+package com.btp.dataStructures.trees;
 
-import com.btp.dataStructures.nodes.GenericNodes.SplayNode;
+import com.btp.dataStructures.nodes.SplayNode;
 
 /**
  * the public class for the SplayTree instances. This code is based in the tutorial found in
@@ -8,6 +8,7 @@ import com.btp.dataStructures.nodes.GenericNodes.SplayNode;
  * for using generic type nodes and getter/setter methods for data-scope reduction.
  * @param <T> generic type of objects to possibly contain in the tree instance
  */
+
 public class SplayTree<T extends Comparable<T>> {
     private SplayNode<T> root;
     int values = 0;
@@ -46,10 +47,13 @@ public class SplayTree<T extends Comparable<T>> {
                 current = current.getLeft();
             }
         }
-        current = new SplayNode(0);
-        current.setElement(element);
+
+        current = new SplayNode<>(element);
         current.setParent(parent);
-        int x = element.compareTo(parent.getElement());
+        int x = 0;
+        if (parent != null) {
+            x = element.compareTo(parent.getElement());
+        }
         if (parent == null) {
             root = current;
         }
@@ -90,8 +94,6 @@ public class SplayTree<T extends Comparable<T>> {
         parent.setParent(child);
         parent.setLeft(child.getRight());
         child.setRight(parent);
-        //zig zag memory go brrr
-        //TODO: actually understand what is going on
     }
 
     /**
@@ -255,74 +257,5 @@ public class SplayTree<T extends Comparable<T>> {
             return null;
         }
         return null;
-    }
-
-    /**
-     * in order traversal printing method
-     * this method is used to print the tree in the following order: left subtree, root and right subtree.
-     */
-    public void inOrder() {
-        inorder(this.root);
-    }
-
-    /**
-     * private inorder traversal method
-     * @param root the root object of the SplayTree instance
-     */
-    private void inorder(SplayNode<T> root) {
-        if (root != null) {
-            inorder(root.getLeft());
-            System.out.println(root.getElement() + " ");
-            inorder(root.getRight());
-        }
-        else {
-            System.out.println("root is empty");
-        }
-    }
-
-    /**
-     * public preorder traversal method
-     * this method is used to print the tree in the following order: the root, the left subtree, the right subtree
-     */
-    public void preorder() {
-        preorder(this.root);
-    }
-
-    /**
-     * private preorder traversal method
-     * @param root root object of the SplayTree instance
-     */
-    private void preorder(SplayNode<T> root) {
-        if (root != null) {
-            System.out.println(root.getElement() + " ");
-            preorder(root.getLeft());
-            preorder(root.getRight());
-        }
-        else {
-            System.out.println("root is empty");
-        }
-    }
-
-    /**
-     * public postorder traversal method
-     * this method is used to print the tree in the following order: left subtree, right subtree, root
-     */
-    public void postorder() {
-        postorder(this.root);
-    }
-
-    /**
-     * private preorder traversal method
-     * @param root the root of the SplayTree Instance
-     */
-    private void postorder(SplayNode<T> root) {
-        if (root != null) {
-            postorder(root.getLeft());
-            postorder(root.getRight());
-            System.out.println(root.getElement() + " ");
-        }
-        else {
-            System.out.println("root is empty");
-        }
     }
 }

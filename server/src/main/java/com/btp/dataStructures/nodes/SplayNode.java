@@ -1,4 +1,4 @@
-package com.btp.dataStructures.nodes.GenericNodes;
+package com.btp.dataStructures.nodes;
 
 /**
  * Nodes used for the Splay Tree data structure
@@ -13,7 +13,7 @@ public class SplayNode<T extends Comparable<T>> {
 
     /**
      * public constructor, to be used more simply
-     * @param inData
+     * @param inData T element the node contains
      */
     public SplayNode(T inData){
         this(inData,null,null,null);
@@ -44,7 +44,7 @@ public class SplayNode<T extends Comparable<T>> {
 
     /**
      * setter method for the element in the node that has to be
-     * modified or setted in the first place.
+     * modified or set in the first place.
      * @param element the T-value that the user wants to put in the node
      */
     public void setElement(T element) {
