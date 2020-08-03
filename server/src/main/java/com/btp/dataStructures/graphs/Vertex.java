@@ -60,9 +60,24 @@ public class Vertex<T extends Comparable<T>> {
         return this.outgoing;
     }
 
+    public int getMinDistance() {
+        return this.minDistance;
+    }
+
+    public Vertex<T> getPrevious() {
+        return this.previous;
+    }
+
+    public void setMinDistance(int minDistance) {
+        this.minDistance = minDistance;
+    }
+
+    public void setPrevious(Vertex<T> previous) {
+        this.previous = previous;
+    }
 
     /**
-     * Get string of Vertex with all it's ingoing and outgoing adjacencies
+     * Get string of Vertex with all it's ingoing and outgoing adjacent values
      * @ return string
      */
     @Override

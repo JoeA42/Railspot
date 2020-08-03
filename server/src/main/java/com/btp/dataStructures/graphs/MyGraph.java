@@ -2,6 +2,8 @@ package com.btp.dataStructures.graphs;
 
 import com.btp.dataStructures.lists.SinglyList;
 
+import java.util.PriorityQueue;
+
 public class MyGraph<T extends Comparable<T>> {
     private SinglyList<Vertex<T>> vertices;
     private SinglyList<Edge<T>> edges;
@@ -25,7 +27,7 @@ public class MyGraph<T extends Comparable<T>> {
      * @param destination value to put in vertex destination
      * @param cost to set the weight/cost of the edge
      */
-    public void add(T source, T destination, double cost) {
+    public void add(T source, T destination, int cost) {
         Edge<T> temp = findEdge(source, destination);
         if (temp != null) {
             // Don't allow multiple edges, update cost.
@@ -181,6 +183,68 @@ public class MyGraph<T extends Comparable<T>> {
             queue.remove(0);
         }
         return isConnected();
+    }
+
+    /**
+     * Creates path information on the graph using Dijkstra's algorithm.
+     * places the information into the vertices, based on the given starting one.
+     * @param value type T value held in the starting vertex.
+     * @return true if successful, false if empty or not found
+     */
+    private boolean Dijkstra(T value) {
+        if (vertices.getHead() == null) {
+            return false;
+        }
+
+        // reset all the distances and the previous values.
+        resetDistances();
+
+        // make sure it is valid
+        Vertex<T> source = findVertex(value);
+        if (source == null) {
+            return false;
+        }
+
+        // set to 0 and add to heap
+        source.setMinDistance(0);
+        PriorityQueue<Vertex<T>> pq = new PriorityQueue<>();
+        pq.add(source);
+
+        while (!pq.isEmpty()) {
+            // pull off top of queue, based on priority
+            Vertex<T> u = pq.poll();
+            //loop through adjacent vertices
+            for (int i = 0; i < u.getOutgoing().getLength(); i++) {
+                Vertex<T> temp = u.getOutgoing().get(i).getData();
+                //get the edge
+                Edge<T> edge = findEdge(u, temp);
+                if (edge == null) {
+                    return false;
+                }
+                // add cost to current
+                int totalDistance = u.getMinDistance() + edge.getCost();
+                if (totalDistance < temp.getMinDistance()) {
+                    // new cost is lower, set it and add to queue
+                    pq.remove(temp);
+                    temp.setMinDistance(totalDistance);
+                    // link the vertex
+                    temp.setPrevious(u);
+                    pq.add(temp);
+                }
+            }
+        }
+        return true;
+    }
+
+
+    /**
+     * used in Dijkstra's, resets all the path tree fields
+     */
+    private void resetDistances() {
+        for (int i = 0; i < vertices.getLength(); i++) {
+            vertices.get(i).getData().setMinDistance(Integer.MAX_VALUE);
+            vertices.get(i).getData().setPrevious(null);
+        }
     }
     //TODO add BreadthFirstSearch, and Dijkstra main and helper methods
 }

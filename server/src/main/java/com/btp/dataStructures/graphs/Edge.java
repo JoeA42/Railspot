@@ -3,7 +3,7 @@ package com.btp.dataStructures.graphs;
 public class Edge<T extends Comparable<T>> {
     private Vertex<T> from;
     private Vertex<T> to;
-    private double cost;
+    private int cost;
     private MyGraph<T> graph;
 
     /**
@@ -12,7 +12,7 @@ public class Edge<T extends Comparable<T>> {
      * @param cost double value for cost/weight of edge
      * @param graph reference to the graph which the edges belong to.
      */
-    public Edge(T v1, T v2, double cost, MyGraph<T> graph) {
+    public Edge(T v1, T v2, int cost, MyGraph<T> graph) {
         from = graph.findVertex(v1);
         if (from == null)
         {
@@ -49,11 +49,11 @@ public class Edge<T extends Comparable<T>> {
         return this.to;
     }
 
-    public void setCost(double newCost) {
+    public void setCost(int newCost) {
         this.cost = newCost;
     }
 
-    public double getCost() {
+    public int getCost() {
         return this.cost;
     }
 
