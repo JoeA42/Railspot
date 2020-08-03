@@ -113,5 +113,74 @@ public class MyGraph<T extends Comparable<T>> {
         vertex.setState(State.COMPLETE);
     }
 
+    /**
+     * Performs a breadth-first search
+     * starting at 'root' node (First created vertex)
+     * @return true is connected, false is not connected or empty
+     */
+    public boolean BreadthFirstSearch() {
+          if (vertices.getHead() == null) {
+              return false;
+          }
+          clearStates();
+
+          Vertex<T> root = vertices.get(0).getData();
+          if (root == null) {
+              return false;
+          }
+
+          // TODO: make sure this created list works as a queue. Must be implemented as queue.
+          SinglyList<Vertex<T>> queue = new SinglyList<>();
+          queue.add(root);
+          root.setState(State.COMPLETE);
+
+          while (!(queue.getHead() == null)) {
+              root = queue.getHead().getData(); // used in place of queue.Peek(), as this way we get the head of the queue without deleting it, just as Peak works.
+              for (int i = 0; i < root.getOutgoing().getLength(); i++) {
+                  Vertex<T> each = root.getOutgoing().get(i).getData();
+                  if (each.getState() == State.UNVISITED) {
+                      each.setState(State.COMPLETE);
+                      queue.add(each);
+                  }
+              }
+              queue.remove(0); // on a regular Queue interface, this would return the element before removing it, but in this implementation the return value is not used, therefore removing it works just fine
+          }
+          return isConnected();
+    }
+
+    /**
+     * Performs breadth-first search on a given starting vertex
+     * @param value type T value held on the starting vertex
+     * @return true if connected, false if not or if empty
+     */
+    public boolean BreadthFirstSearch(T value) {
+        if (vertices.getHead() == null) {
+            return false;
+        }
+        clearStates();
+
+        Vertex<T> root = findVertex(value);
+        if (root == null) {
+            return false;
+        }
+
+        // TODO: just as method above, confirm this list works as a Queue-implementing structure.
+        SinglyList<Vertex<T>> queue = new SinglyList<>();
+        queue.add(root);
+        root.setState(State.COMPLETE);
+
+        while (!(queue.getHead() == null)) {
+            root = queue.getHead().getData(); // again used in place of queue.peak()
+            for (int i = 0; i < root.getOutgoing().getLength(); i++) {
+                Vertex<T> each = root.getOutgoing().get(i).getData();
+                if (each.getState() == State.UNVISITED) {
+                    each.setState(State.COMPLETE);
+                    queue.add(each);
+                }
+            }
+            queue.remove(0);
+        }
+        return isConnected();
+    }
     //TODO add BreadthFirstSearch, and Dijkstra main and helper methods
 }
