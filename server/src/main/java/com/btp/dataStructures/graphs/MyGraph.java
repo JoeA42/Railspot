@@ -4,19 +4,37 @@ import com.btp.dataStructures.lists.SinglyList;
 
 import java.util.PriorityQueue;
 
+/**
+ * Class representation of a Weighted Directed Graph.
+ * inherits from comparable to allow generic type implementation.
+ * @author /u/Philboyd_Studge for r/javaexamples, retrieved original version from https://gist.github.com/snarkbait/9ff6fffe423b220c8890
+ * @author AleQuesada2012 (for modified version, using own-implemented linked lists, no internal classes and private attribute access methods).
+ */
 public class MyGraph<T extends Comparable<T>> {
     private SinglyList<Vertex<T>> vertices;
     private SinglyList<Edge<T>> edges;
 
+    /**
+     * default graph constructor
+     * instantiates the vertex and edge containing lists.
+     */
     public MyGraph() {
         vertices = new SinglyList<>();
         edges = new SinglyList<>();
     }
 
+    /**
+     * get method for Edges list
+     * @return SinglyList (linked list) of all graph edges.
+     */
     public SinglyList<Edge<T>> getEdges() {
         return this.edges;
     }
 
+    /**
+     * get method for Vertices list
+     * @return SinglyList (linked list) of all graph vertices.
+     */
     public SinglyList<Vertex<T>> getVertices() {
         return this.vertices;
     }
@@ -42,10 +60,11 @@ public class MyGraph<T extends Comparable<T>> {
     }
 
     /**
-     * find vertex with a value
-     * TODO document all modifications in methods, access scopes and logic, as well as original reference.
+     * find a vertex with a given value
+     * @param value T type value expected to be held in a vertex
+     * @return a Vertex object if found, null if no vertex held the value in the parameter.
      */
-      Vertex<T> findVertex(T value) {
+    Vertex<T> findVertex(T value) {
         for (int i = 0; i < vertices.getLength(); i++) {
             boolean compared = vertices.get(i).getData().getValue().compareTo(value) == 0;
             if (compared){
@@ -55,6 +74,12 @@ public class MyGraph<T extends Comparable<T>> {
         return null;
     }
 
+    /**
+     * find an edge with the source and destination vertices
+     * @param v1 the Vertex representing the source of the edge
+     * @param v2 the Vertex representing the destination of the edge
+     * @return an Edge type object if found, null if no edge matched the specified route
+     */
     Edge<T> findEdge(Vertex<T> v1, Vertex<T> v2) {
         for (int i = 0; i < edges.getLength(); i++) {
             if (edges.get(i).getData().getFrom().equals(v1) && edges.get(i).getData().getTo().equals(v2)) {
@@ -64,6 +89,12 @@ public class MyGraph<T extends Comparable<T>> {
         return null;
     }
 
+    /**
+     * find an edge with the source and destination values
+     * @param from the value to be found in a vertex which should represent the source.
+     * @param to the value to be found in a vertex which should represent the destination.
+     * @return an Edge type object if found, null if no edge matched the specified parameters.
+     */
     Edge<T> findEdge(T from, T to) {
         for (int i = 0; i < edges.getLength(); i++) {
             if (edges.get(i).getData().getFrom().getValue().equals(from) && edges.get(i).getData().getTo().getValue().equals(to)) {
@@ -73,12 +104,19 @@ public class MyGraph<T extends Comparable<T>> {
         return null;
     }
 
+    /**
+     * reset all the vertex states to Unvisited using the State enum.
+     */
     private void clearStates() {
         for (int i = 0; i < vertices.getLength(); i++) {
             vertices.get(i).getData().setState(State.UNVISITED);
         }
     }
 
+    /**
+     * checks if the graph is connected by accessing each vertex's state
+     * @return true if the graph is connected, false otherwise.
+     */
     public boolean isConnected() {
         for (int i = 0; i < vertices.getLength(); i++) {
             if (vertices.get(i).getData().getState() != State.COMPLETE) {
@@ -88,6 +126,11 @@ public class MyGraph<T extends Comparable<T>> {
         return true;
     }
 
+    /**
+     * performs a recursive depth-first search on the
+     * 'root' node (the first vertex created)
+     * @return true if connected, false if empty or not connected.
+     */
     public boolean DepthFirstSearch() {
         if (vertices.getHead() == null) {
             return false;
@@ -103,6 +146,10 @@ public class MyGraph<T extends Comparable<T>> {
         return isConnected();
     }
 
+    /**
+     * auxiliary method for depth first search
+     * @param vertex the starting vertex for the search
+     */
     private void DepthFirstSearch(Vertex<T> vertex) {
         vertex.setState(State.VISITED);
 
@@ -207,6 +254,7 @@ public class MyGraph<T extends Comparable<T>> {
 
         // set to 0 and add to heap
         source.setMinDistance(0);
+        //TODO: make own priority queue that works with Vertex class
         PriorityQueue<Vertex<T>> pq = new PriorityQueue<>();
         pq.add(source);
 
@@ -236,6 +284,28 @@ public class MyGraph<T extends Comparable<T>> {
         return true;
     }
 
+    /**
+     * obtain the shortest path to a specified vertex
+     * @param target Vertex representing the desired destination
+     * @return a linked list of strings containing the path.
+     */
+    private SinglyList<String> getShortestPath(Vertex<T> target) {
+        SinglyList<String> path = new SinglyList<>();
+
+        // check for no path found
+        if (target.getMinDistance() == Integer.MAX_VALUE) {
+            path.add("No path found");
+            return path;
+        }
+
+        // loop through the vertices from end target
+        for (Vertex<T> v = target; v != null; v = v.getPrevious()) {
+            path.add(v.getValue() + " : cost: " + v.getMinDistance());
+        }
+
+        // invert the list and return it
+        return path.flip();
+    }
 
     /**
      * used in Dijkstra's, resets all the path tree fields
@@ -246,5 +316,46 @@ public class MyGraph<T extends Comparable<T>> {
             vertices.get(i).getData().setPrevious(null);
         }
     }
-    //TODO add BreadthFirstSearch, and Dijkstra main and helper methods
+
+    /**
+     * main method for regular usage of Dijkstras algorithm and private functions
+     * calls the Dijkstra method to build the path tree for the given
+     * starting vertex, then calls getShortestPath method to return
+     * a list that contains all the steps in the shortest path to the destination vertex.
+     * @param from value of type T for source vertex.
+     * @param to value of type T for destination vertex.
+     * @return string linked list of the steps in the shortest path
+     */
+    public SinglyList<String> getPath(T from, T to) {
+        boolean test = Dijkstra(from);
+        if (!test) {
+            return null;
+        }
+        return getShortestPath(findVertex(to));
+    }
+
+    /**
+     *
+     * @return string with all the vertices
+     */
+    @Override
+    public String toString() {
+        String retval = "";
+        for (int i = 0; i < vertices.getLength(); i++) {
+            retval += vertices.get(i).getData().toString() + "\n";
+        }
+        return retval;
+    }
+
+    /**
+     *
+     * @return string with all the edges
+     */
+    public String edgesToString() {
+        String retval = "";
+        for (int i = 0; i < edges.getLength(); i++) {
+            retval += edges.get(i).getData().toString() + "\n";
+        }
+        return retval;
+    }
 }

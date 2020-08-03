@@ -177,4 +177,16 @@ public class SinglyList<T> extends LinkedList<T> {
         first.setData(second.getData());
         second.setData(temporalFirst);
     }
+
+    /**
+     * creates an inverted version of the existing list
+     * @return a SinglyList of type T, with the same length of the instance which invoked the method, with the elements flipped.
+     */
+    public SinglyList<T> flip() {
+        SinglyList<T> result = new SinglyList<>();
+        for (int i = this.length - 1 ; i >= 0 ; i--) {
+            result.add(this.get(i).getData());
+        }
+        return result;
+    }
 }
