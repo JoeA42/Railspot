@@ -1,19 +1,31 @@
 html {
     min-height: 100vh;
+    max-height: 100vh;
 }
 
 header {
-    min-height: 10vh;
+    margin: -19px -8px -10px;
+    min-height: 5vh;
+    max-height: 5vh;
 }
 
 body {
-    min-height: 80vh;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -18px;
+    min-height: 90vh;
+    max-height: 90vh;
     font-family: "Montserrat", sans-serif;
-    background-color: plum;
+    background-color: burlywood;
+    text-align: center;
 }
 
 footer {
-    min-height: 10vh;
+    min-height: 5vh;
+    max-height: 5vh;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -15px;
 }
 
 header, footer {
@@ -37,10 +49,11 @@ header a:visited, footer a:visited {
     color: white;
 }
 
-ul {
+ul li {
     list-style-type: none;
+    display: inline;
 }
 
 .main-container {
-    background-color: cornflowerblue;
+    background-color: darkgray;
 }
