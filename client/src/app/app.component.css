@@ -1,0 +1,34 @@
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #121113;
+    margin: -10px;
+}
+
+header, footer a {
+    font-size: large;
+    color: white;
+}
+
+header a {
+    text-decoration: none;
+    margin-right: 10px;
+    float: right;
+}
+
+
+header a:hover, footer a:hover {
+    background-color: #47434C;
+}
+
+header a:visited, footer a:visited {
+    color: white;
+}
+
+
+ul {
+    list-style-type: none;
+}
