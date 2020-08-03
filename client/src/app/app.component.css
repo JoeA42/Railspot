@@ -1,16 +1,26 @@
-html, body {
+html {
     min-height: 100vh;
 }
 
-body {
-    font-family: "Montserrat", sans-serif;
-    background-color: #121113;
-    margin: -10px;
+header {
+    min-height: 10vh;
 }
 
-header, footer a {
+body {
+    min-height: 80vh;
+    font-family: "Montserrat", sans-serif;
+    background-color: plum;
+}
+
+footer {
+    min-height: 10vh;
+}
+
+header, footer {
+    font-family: "Montserrat", sans-serif;
     font-size: large;
     color: white;
+    background-color: #121113;
 }
 
 header a {
@@ -18,7 +28,6 @@ header a {
     margin-right: 10px;
     float: right;
 }
-
 
 header a:hover, footer a:hover {
     background-color: #47434C;
@@ -28,7 +37,10 @@ header a:visited, footer a:visited {
     color: white;
 }
 
-
 ul {
     list-style-type: none;
+}
+
+.main-container {
+    background-color: cornflowerblue;
 }
