@@ -1,0 +1,59 @@
+html {
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+header {
+    margin: -19px -8px -10px;
+    min-height: 5vh;
+    max-height: 5vh;
+}
+
+body {
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -18px;
+    min-height: 90vh;
+    max-height: 90vh;
+    font-family: "Montserrat", sans-serif;
+    background-color: burlywood;
+    text-align: center;
+}
+
+footer {
+    min-height: 5vh;
+    max-height: 5vh;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -15px;
+}
+
+header, footer {
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    color: white;
+    background-color: #121113;
+}
+
+header a {
+    text-decoration: none;
+    margin-right: 10px;
+    float: right;
+}
+
+header a:hover, footer a:hover {
+    background-color: #47434C;
+}
+
+header a:visited, footer a:visited {
+    color: white;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline;
+}
+
+.main-container {
+    background-color: darkgray;
+}
