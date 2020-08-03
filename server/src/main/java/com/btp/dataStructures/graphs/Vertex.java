@@ -35,12 +35,15 @@ public class Vertex<T extends Comparable<T>> {
     public void addOutgoing(Vertex<T> vert) {
         outgoing.add(vert);
     }
+
     public void setValue(T value) {
         this.value = value;
     }
+
     public T getValue() {
         return this.value;
     }
+
     public void setState(State state) {
         this.state = state;
     }

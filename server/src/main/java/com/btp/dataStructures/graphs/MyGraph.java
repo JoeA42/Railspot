@@ -11,8 +11,21 @@ public class MyGraph<T extends Comparable<T>> {
         edges = new SinglyList<>();
     }
 
+    public SinglyList<Edge<T>> getEdges() {
+        return this.edges;
+    }
+
+    public SinglyList<Vertex<T>> getVertices() {
+        return this.vertices;
+    }
+
+    /**
+     * creates edge from two T values directed from source to dest
+     * @param source the value to put in vertex source
+     * @param destination value to put in vertex destination
+     * @param cost to set the weight/cost of the edge
+     */
     public void add(T source, T destination, double cost) {
-        // TODO check types in error and adapt method
         Edge<T> temp = findEdge(source, destination);
         if (temp != null) {
             // Don't allow multiple edges, update cost.
@@ -21,7 +34,7 @@ public class MyGraph<T extends Comparable<T>> {
         }
         else {
             // this will also create the vertices
-            Edge<T> edge = new Edge<>(source, destination, cost);
+            Edge<T> edge = new Edge<>(source, destination, cost,this);
             edges.add(edge);
         }
     }
@@ -30,7 +43,7 @@ public class MyGraph<T extends Comparable<T>> {
      * find vertex with a value
      * TODO document all modifications in methods, access scopes and logic, as well as original reference.
      */
-    private Vertex<T> findVertex(T value) {
+      Vertex<T> findVertex(T value) {
         for (int i = 0; i < vertices.getLength(); i++) {
             boolean compared = vertices.get(i).getData().getValue().compareTo(value) == 0;
             if (compared){
@@ -40,9 +53,18 @@ public class MyGraph<T extends Comparable<T>> {
         return null;
     }
 
-    private Edge<T> findEdge(Vertex<T> v1, Vertex<T> v2) {
+    Edge<T> findEdge(Vertex<T> v1, Vertex<T> v2) {
         for (int i = 0; i < edges.getLength(); i++) {
             if (edges.get(i).getData().getFrom().equals(v1) && edges.get(i).getData().getTo().equals(v2)) {
+                return edges.get(i).getData();
+            }
+        }
+        return null;
+    }
+
+    Edge<T> findEdge(T from, T to) {
+        for (int i = 0; i < edges.getLength(); i++) {
+            if (edges.get(i).getData().getFrom().getValue().equals(from) && edges.get(i).getData().getTo().getValue().equals(to)) {
                 return edges.get(i).getData();
             }
         }
