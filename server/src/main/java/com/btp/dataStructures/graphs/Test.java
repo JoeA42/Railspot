@@ -1,10 +1,5 @@
 package com.btp.dataStructures.graphs;
 
-import com.btp.dataStructures.lists.SinglyList;
-
-import java.util.List;
-import java.util.ArrayList;
-
 public class Test {
     public static void main(String[] args) {
 
@@ -12,28 +7,22 @@ public class Test {
         MyGraph<String> graph = new MyGraph<>();
 
         // add a bunch of edges
-        graph.add("SACRAMENTO", "PHOENIX", 150);
-        graph.add("PHOENIX", "SACRAMENTO", 135);
-        graph.add("PHOENIX", "SLC", 120);
-        graph.add("SLC", "SACRAMENTO", 175);
-        graph.add("SACRAMENTO", "PHOENIX", 160); // edge already exists!!!
-        graph.add("SACRAMENTO", "PORTLAND", 90);
-        graph.add("PORTLAND", "SLC", 185);
-        graph.add("OAKLAND", "SACRAMENTO", 45);
-        graph.add("PORTLAND", "OAKLAND", 100);
-        graph.add("SLC", "OAKLAND", 150);
-        graph.add("LAX", "OAKLAND", 75);
-        graph.add("SLC", "LAS VEGAS", 100);
-        graph.add("LAS VEGAS", "CHICAGO", 250);
+        graph.add("Moravia", "SanPeter", 150);
+        graph.add("SanPeter", "Sabana", 135);
+        graph.add("Sabana", "Caja", 120);
+        graph.add("Caja", "Curridabat", 175);
+        graph.add("Curridabat", "Tres Rios", 160); // edge already exists!!!
+        graph.add("Curridabat", "Zapote", 90);
+        graph.add("Zapote", "Los Yoses", 185);
 
         System.out.println("Graph is connected: " + graph.DepthFirstSearch());
-        System.out.println("Connected from LAX:" + graph.BreadthFirstSearch("LAX"));
+        System.out.println("Connected from Zapote:" + graph.BreadthFirstSearch("Zapote"));
         System.out.println();
 
         System.out.println(graph);
         System.out.println(graph.edgesToString());
 
-        System.out.println("LAX to PORTLAND");
-        graph.getPath("LAX", "PORTLAND").print();
+        System.out.println("Moravia to Zapote");
+        graph.getPath("Moravia", "Zapote").print();
     }
 }

@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
  * Class representation of a Weighted Directed Graph.
  * inherits from comparable to allow generic type implementation.
  * @author /u/Philboyd_Studge for r/javaexamples, retrieved original version from https://gist.github.com/snarkbait/9ff6fffe423b220c8890
- * @author AleQuesada2012 (for modified version, using own-implemented linked lists, no internal classes and private attribute access methods).
+ * AleQuesada2012 (for modified version, using own-implemented linked lists, no internal classes and private attribute access methods).
  */
 public class MyGraph<T extends Comparable<T>> {
     private SinglyList<Vertex<T>> vertices;
@@ -255,7 +255,7 @@ public class MyGraph<T extends Comparable<T>> {
         // set to 0 and add to heap
         source.setMinDistance(0);
         //TODO: make own priority queue that works with Vertex class
-        PriorityQueue<Vertex<T>> pq = new PriorityQueue<>();
+        PriorityQueue<Vertex<T>> pq = new PriorityQueue<>(new VertexComparator<T>());
         pq.add(source);
 
         while (!pq.isEmpty()) {
