@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.btp</groupId>
-    <artifactId>CookTime</artifactId>
+    <artifactId>Railspot</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>CookTime</name>
+    <name>Railspot</name>
 
 
     <build>
-        <finalName>CookTime</finalName>
+        <finalName>Railspot</finalName>
 
         <plugins>
             <plugin>
