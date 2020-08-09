@@ -5,6 +5,10 @@ import { AppComponent } from './app.component';
 import { RouteMapComponent } from './route-map/route-map.component';
 import {RouteMapService} from './route-map/route-map.service';
 import { PurchaseWindowComponent } from './purchase-window/purchase-window.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -13,7 +17,10 @@ import { PurchaseWindowComponent } from './purchase-window/purchase-window.compo
     PurchaseWindowComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+    MatToolbarModule
   ],
   providers: [
     RouteMapService

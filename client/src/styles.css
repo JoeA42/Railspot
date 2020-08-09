@@ -1,0 +1,10 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+}
+div{
+  color: grey;
+}
