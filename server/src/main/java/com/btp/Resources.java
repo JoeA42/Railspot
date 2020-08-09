@@ -1,8 +1,10 @@
 package com.btp;
 
+import com.btp.serverData.clientObjects.Ticket;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 
 /**
@@ -22,5 +24,19 @@ public class Resources {
     @Produces(MediaType.APPLICATION_JSON)
     public String getResources() {
         return "Resources Main page. (WIP)";
+    }
+
+    @GET
+    @Path("getTicket")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Ticket getTicket(@QueryParam("ticketId") int ticketId){
+        Ticket ticket = new Ticket();
+        ticket.setUserId(117340941);
+        ticket.setFrom("Testing");
+        ticket.setTo("Test Complete");
+        ticket.setDate("1/8/2020");
+        ticket.setTicketNumber(1);
+
+        return ticket;
     }
 }

@@ -17,10 +17,10 @@ public class VertexComparator<T extends Comparable<T>> implements Comparator<Ver
      */
     @Override
     public int compare(Vertex<T> o1, Vertex<T> o2) {
-        if (o1.getMinDistance() < o2.getMinDistance()) {
+        if (o1.getMinDistance() > o2.getMinDistance()) {
             return 1;
         }
-        else if (o1.getMinDistance() > o2.getMinDistance()) {
+        else if (o1.getMinDistance() < o2.getMinDistance()) {
             return -1;
         }
         return 0;

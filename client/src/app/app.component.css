@@ -16,7 +16,7 @@ body {
     min-height: 90vh;
     max-height: 90vh;
     font-family: "Montserrat", sans-serif;
-    background-color: burlywood;
+    background-color: #6D7275;
     text-align: center;
 }
 
@@ -25,7 +25,6 @@ footer {
     max-height: 5vh;
     margin-left: -8px;
     margin-right: -8px;
-    margin-bottom: -15px;
 }
 
 header, footer {
@@ -35,25 +34,35 @@ header, footer {
     background-color: #121113;
 }
 
-header a {
-    text-decoration: none;
+header li {
     margin-right: 10px;
     float: right;
-}
-
-header a:hover, footer a:hover {
-    background-color: #47434C;
-}
-
-header a:visited, footer a:visited {
-    color: white;
-}
-
-ul li {
     list-style-type: none;
     display: inline;
 }
 
+footer a:hover {
+    background-color: #47434C;
+}
+
+footer a:visited {
+    color: white;
+}
+
 .main-container {
-    background-color: darkgray;
+    background-image: url("src/assets/images/mapbg.jpg");
+}
+
+.terms {
+    margin-left: 550px;
+    margin-right: 50px;
+}
+
+.privacy {
+    margin-left: 50px;
+    margin-right: 550px;
+}
+
+.logo {
+    margin-bottom: -20px;
 }
