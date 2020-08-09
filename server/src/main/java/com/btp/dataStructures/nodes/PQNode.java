@@ -2,6 +2,7 @@ package com.btp.dataStructures.nodes;
 
 public class PQNode<T> extends Node<T> {
     protected Node<T> next;
+    protected Node<T> previous;
     private int priority;
 
     public PQNode(T data) {
@@ -23,12 +24,12 @@ public class PQNode<T> extends Node<T> {
 
     @Override
     public Node<T> getPrevious() {
-        return null;
+        return previous;
     }
 
     @Override
     public void setPrevious(Node<T> previous) {
-        System.out.println("pqnodes have no previous.");
+        System.out.println(this.previous = previous);
     }
 
     @Override

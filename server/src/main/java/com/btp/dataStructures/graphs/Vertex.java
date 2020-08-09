@@ -127,7 +127,7 @@ public class Vertex<T extends Comparable<T>> {
     @Override
     public String toString() {
         String retval = "";
-        retval += "Vertex: " + value + " : ";
+        retval += "Vertex: " + value + " : " + "minD: " + minDistance + " ";
         retval += " In: ";
         for (int i = 0; i < incoming.getLength(); i++) {
             retval += incoming.get(i).getData().getValue() + " ";

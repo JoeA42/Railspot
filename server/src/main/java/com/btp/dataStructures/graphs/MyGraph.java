@@ -1,8 +1,7 @@
 package com.btp.dataStructures.graphs;
 
+import com.btp.dataStructures.lists.PriorityQueue;
 import com.btp.dataStructures.lists.SinglyList;
-
-import java.util.PriorityQueue;
 
 /**
  * Class representation of a Weighted Directed Graph.
@@ -232,6 +231,59 @@ public class MyGraph<T extends Comparable<T>> {
         return isConnected();
     }
 
+//    /**
+//     * Creates path information on the graph using Dijkstra's algorithm.
+//     * places the information into the vertices, based on the given starting one.
+//     * @param value type T value held in the starting vertex.
+//     * @return true if successful, false if empty or not found
+//     */
+//    private boolean Dijkstra(T value) {
+//        if (vertices.getHead() == null) {
+//            return false;
+//        }
+//
+//        // reset all the distances and the previous values.
+//        resetDistances();
+//
+//        // make sure it is valid
+//        Vertex<T> source = findVertex(value);
+//        if (source == null) {
+//            return false;
+//        }
+//
+//        // set to 0 and add to heap
+//        source.setMinDistance(0);
+
+//        PriorityQueue<Vertex<T>> pq = new PriorityQueue<>(new VertexComparator<T>());
+//        pq.add(source);
+//
+//        while (!pq.isEmpty()) {
+//            // pull off top of queue, based on priority
+//            Vertex<T> u = pq.poll();
+//            //loop through adjacent vertices
+//            for (int i = 0; i < u.getOutgoing().getLength(); i++) {
+//                Vertex<T> temp = u.getOutgoing().get(i).getData();
+//                //get the edge
+//                Edge<T> edge = findEdge(u, temp);
+//                if (edge == null) {
+//                    return false;
+//                }
+//                // add cost to current
+//                int totalDistance = u.getMinDistance() + edge.getCost();
+//                if (totalDistance < temp.getMinDistance()) {
+//                    // new cost is lower, set it and add to queue
+//                    pq.remove(temp);
+//                    temp.setMinDistance(totalDistance);
+//                    // link the vertex
+//                    temp.setPrevious(u);
+//                    pq.add(temp);
+//                }
+//            }
+//            System.out.println(pq.toString());
+//        }
+//        return true;
+//    }
+
     /**
      * Creates path information on the graph using Dijkstra's algorithm.
      * places the information into the vertices, based on the given starting one.
@@ -254,8 +306,8 @@ public class MyGraph<T extends Comparable<T>> {
 
         // set to 0 and add to heap
         source.setMinDistance(0);
-        //TODO: make own priority queue that works with Vertex class
-        PriorityQueue<Vertex<T>> pq = new PriorityQueue<>(new VertexComparator<T>());
+        // hover mouse on instance type to see it's import value
+        PriorityQueue<Vertex<T>> pq = new PriorityQueue<>(new VertexComparator<>());
         pq.add(source);
 
         while (!pq.isEmpty()) {
@@ -283,6 +335,9 @@ public class MyGraph<T extends Comparable<T>> {
         }
         return true;
     }
+
+
+
 
     /**
      * obtain the shortest path to a specified vertex
