@@ -14,6 +14,9 @@ public class Vertex<T extends Comparable<T>> {
     private SinglyList<Vertex<T>> outgoing;
     private State state;
 
+    private double longitude;
+    private double latitude;
+
     /**
      * Creates new Vertex with value T
      */
@@ -137,5 +140,37 @@ public class Vertex<T extends Comparable<T>> {
             retval += outgoing.get(i).getData().getValue() + " ";
         }
         return retval;
+    }
+
+    /**
+     * Getter for the longitude attribute
+     * @return double the longitude of the station
+     */
+    public double getLongitude() {
+        return longitude;
+    }
+
+    /**
+     * Setter for the longitude attribute
+     * @param longitude double the longitude of the station
+     */
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    /**
+     * Getter for the latitude attribute
+     * @return double the latitude of the station
+     */
+    public double getLatitude() {
+        return latitude;
+    }
+
+    /**
+     * Setter for the latitude attribute
+     * @param latitude double the latitude of the station
+     */
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
     }
 }

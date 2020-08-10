@@ -23,7 +23,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
-        <url-pattern>/railAPI/*</url-pattern>
+        <url-pattern>/cookAPI/*</url-pattern>
     </servlet-mapping>
 
 </web-app>
